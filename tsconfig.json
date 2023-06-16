@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "types": ["node", "nw.js"],
+    "target": "ES6",
+    "useDefineForClassFields": true,
+    "module": "ES6",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.svelte"],
+}
