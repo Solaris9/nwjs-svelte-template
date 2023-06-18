@@ -4,21 +4,23 @@
   "type": "module",
   "main": "dist/index.html",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "./bin/nwjs.app/Contents/MacOS/nwjs ."
+    "start": "node scripts/start",
+    "build": "node scripts/build",
+    "launch": "node scripts/launch"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "@tsconfig/svelte": "^4.0.1",
+    "@types/gulp": "^4.0.11",
+    "@types/node": "^20.3.1",
+    "@types/nw.js": "^0.13.16",
+    "extract-zip": "^2.0.1",
+    "gulp": "^4.0.2",
     "svelte": "^3.57.0",
     "svelte-check": "^2.10.3",
+    "ts-node": "^10.9.1",
     "tslib": "^2.5.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.2"
-  },
-  "dependencies": {
-    "@types/node": "^20.3.0",
-    "@types/nw.js": "^0.13.16"
   }
 }

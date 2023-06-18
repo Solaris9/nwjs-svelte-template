@@ -1,47 +1,48 @@
-# Svelte + TS + Vite
+# NW.js + Svelte Template
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+This is a template built to handle the nitty-gritty parts of running a desktop app, and lets you write.
 
-## Recommended IDE Setup
+## Using the template
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+Simply clone or click "Use this template" button to get a copy of this repo.
 
-## Need an official Svelte framework?
+Include your code in `src/App.svelte`.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+Then run `yarn start` and the script will download the NW.js binary and open a window with your code (may take several seconds for first build).
 
-## Technical considerations
+You'll see `Hello (platform)!` in the centre.
 
-**Why use this over SvelteKit?**
+Happy coding!
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+## Commands
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+- `yarn start`
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+> Starts a file watcher and launches the app with live code reload.
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+- `yarn build`
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+> Builds your app and moves it into the NW.js folder to be packaged.
 
-**Why include `.vscode/extensions.json`?**
+- `yarn launch`
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+> Launches the app
+> Note: `yarn build` should be ran before this as it'll use the default NW.js `index.html`.
 
-**Why enable `allowJs` in the TS template?**
+## Contributors
 
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+### Creators
 
-**Why is HMR not preserving my local component state?**
+<div>
+  <a href="https://github.com/Solaris9">
+    <img src="https://github.com/Solaris9.png?size=50">
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+   `@Solaris9`
+  </a>
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+  <a href="https://github.com/abby-1b">
+    <img src="https://github.com/abby-1b.png?size=50">
 
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+   `@abby-1b`
+  </a>
+</div>
