@@ -1,8 +1,9 @@
 import { spawn } from "child_process";
-import { bin } from "./_cache.js";
+import download from "./_cache.js";
 import os from "os";
 import path from "path";
 
+const bin = await download();
 const dir = process.cwd();
 const nw = path.join(dir, bin);
 const platform = os.platform();

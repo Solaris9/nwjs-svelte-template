@@ -3,11 +3,13 @@ import { build, mergeConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { spawn } from "child_process";
 import { exit } from "process";
-import { bin } from "./_cache.js";
+import download from "./_cache.js";
 import { rm } from "fs/promises";
 import gulp from "gulp";
 import path from "path";
 import os from "os";
+
+const bin = await download(true);
 
 async function buildFiles(done) {
   await build(mergeConfig(base, {

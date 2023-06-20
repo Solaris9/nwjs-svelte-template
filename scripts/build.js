@@ -4,9 +4,11 @@ import { cp, writeFile } from "fs/promises";
 import path from "path";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { base, transformImports } from "./_shared.js";
-import { bin } from "./_cache.js";
+import download from "./_cache.js";
 import pkg from "../package.json" assert { type: "json" };
 import os from "os";
+
+const bin = await download();
 
 await build(mergeConfig(base, {
   plugins: [
